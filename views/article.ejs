@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>TCC Blog</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+	    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@100&family=Sacramento&display=swap" rel="stylesheet">
+    </head>
+    <body>
+            <h2>TCC Blog</h2>
+            <p>To educate, entertain and inform</p>
+            <hr>
+            <a href="/compose">Compose Post</a>
+            <a href="/logout">Logout</a>
+            <hr>
+
+        <% blogpost.forEach(function(post) { %>
+                <h3><%= post.title %></h3>
+                <p><%= post.content %></p>
+
+                <h5><%= post.date %></h5>
+                <hr>
+        <% }) %>
+
+    </body>
+</html>
